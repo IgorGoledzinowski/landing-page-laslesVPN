@@ -3,6 +3,11 @@ const dot = document.querySelectorAll(".controller__dot");
 const activeDot = "controller__dot--active";
 let isUpdated = false;
 
+const toggleMobileNav = (elem) => {
+    document.querySelector('.'+elem).classList.toggle('d-block');
+}
+
+
 const dotButton = (elem) => {
         for(let i=0; i<dot.length; i++){
             dot[i].classList.remove(activeDot); 
