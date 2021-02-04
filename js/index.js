@@ -3,6 +3,22 @@ const dot = document.querySelectorAll(".controller__dot");
 const activeDot = "controller__dot--active";
 let isUpdated = false;
 
+addEventListener("scroll", () => {
+    (scrollY > 45 ) ? addStickyNav() : removeStickyNav();
+})
+
+const navbar = document.getElementById('nav');
+
+const addStickyNav = () => {
+    navbar.classList.add("stickyNavbar");   
+}
+
+const removeStickyNav = () => {
+    if(navbar.classList.contains("stickyNavbar")){
+        navbar.classList.remove("stickyNavbar");
+    }
+}
+
 const toggleMobileNav = (elem) => {
     document.querySelector('.'+elem).classList.toggle('d-block');
 }
