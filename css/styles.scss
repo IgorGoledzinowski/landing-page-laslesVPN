@@ -13,10 +13,14 @@ $navy-blue : #0B132A;
     padding: 0;
     box-sizing: border-box !important;
 }
+body{
+    width: 100% !important;
+}
 
 .bg-lightgrey {
     width: 100%;
     height: 100%;
+    min-width: 300px !important;
     background-color: $white;
     background-image: linear-gradient(to bottom, rgba(248, 248, 248, 1), #fff);
 }
@@ -24,6 +28,7 @@ $navy-blue : #0B132A;
 .bg-grey {
     width: 100%;
     height: 100%;
+    min-width: 300px !important;
     background-color: #F8F8F8;
 }
 
@@ -995,7 +1000,6 @@ $navy-blue : #0B132A;
 
     .pricing {
         width: 900px !important;
-        overflow: hidden;
 
         &__cards {
             grid: 690px / 280px 280px 280px !important;
@@ -1361,10 +1365,11 @@ $navy-blue : #0B132A;
         grid: 382px 300px / auto !important;
         grid-gap: 10px !important;
         justify-content: center;
-        margin: 60px 20px !important;
+        margin: 30px auto !important;
         grid-template-areas:
             "a"
             "b" !important;
+        width: 500px;
         &__img {
             grid-area: b;
             width: 100% !important;
@@ -1571,10 +1576,8 @@ $navy-blue : #0B132A;
         grid-template-areas:
             "b"
             "a" !important;
-        border: 1px solid green;
         overflow: hidden;
         &__text {
-            border: 1px solid blue;
             width: 500px !important;
             margin: 20px auto 0 auto;
             .hero__heading {
@@ -1586,12 +1589,10 @@ $navy-blue : #0B132A;
                 width: 360px;
                 font-size: 14px !important;
                 padding: 0 !important;
-                border: 1px solid orange;
             }
         }
 
         &__img {
-            border: 1px solid red;
             order: 1;
             grid-area: b;
             width: 100% !important;
@@ -1618,7 +1619,6 @@ $navy-blue : #0B132A;
                 grid-area: c;
             }
             .item__inner {
-                border: 1px solid red !important;//cf
                 width: 120px;
                 img{
                     width: 40px !important;
@@ -1641,7 +1641,8 @@ $navy-blue : #0B132A;
         }
     } 
     .features{
-        overflow: hidden;
+        width: 270px;
+        margin: 0 auto !important;
     }
     .location {
         margin-top: 100px !important;
@@ -1712,7 +1713,6 @@ $navy-blue : #0B132A;
         &__logo {
             width: 120px !important;
             height: 30px !important;
-            border: 1px solid green;
             img{
                 width: 100%;
             }
@@ -1725,7 +1725,6 @@ $navy-blue : #0B132A;
             "a" !important;
         min-height: 500px !important;
         &__text {
-            border: 1px solid blue;
             width: 300px !important;
             margin: 20px auto 0 auto !important;
             .hero__heading {
@@ -1738,7 +1737,6 @@ $navy-blue : #0B132A;
                 width: 100%;
                 font-size: 14px !important;
                 line-height: 25px !important;
-                border: 1px solid orange;
             }
             .hero__button {
                 text-align: center !important;
@@ -1758,4 +1756,105 @@ $navy-blue : #0B132A;
             "b"
             "c" !important;
     }
+    .features{
+        .features__heading {
+            width: 270px;
+            font-size: 20px !important;
+            line-height: 30px !important;
+            margin: 0 auto;
+        }
+
+        .features__paragraph {
+            width: 270px;
+            margin: 20px 0 20px 0;
+            line-height: 30px;
+        }
+    }
+    .pricing {
+        width: 270px !important;
+        justify-content: center !important;
+        margin: 0 auto;
+        &__title {
+            font-size: 20px !important;
+            font-weight: 500;
+            color: $navy-blue;
+            padding-top: 80.27px !important;
+            text-align: center;
+        }
+
+        &__paragraph {
+            line-height: 30px;
+            margin: 10px 0 20px 0 !important;
+        }
+        &__cards{
+            grid: 630px 670px 700px / 290px !important;
+        }
+    }
+    .location{
+        margin: 80px 0 !important;
+        &__title{
+            width: 270px;
+            font-size: 20px !important;
+        }
+        &__paragraph{
+            width: 270px;
+        }
+    }
+    .testimonials {
+        width: 270px !important;
+        margin: 80px auto 200px auto !important;
+        &__title{
+            font-size: 20px !important;
+            line-height: 30px !important;
+        }
+        .controller{
+            width: 100% !important;
+            margin: 0 auto !important;
+            .controller__left {
+                display: none !important;
+            }
+                
+        }
+    }
+    .newsletter {
+        position: relative;
+        width: 290px !important;
+        height: 250px !important;
+        padding: 30px 0px !important;
+        overflow: hidden;
+        &__title {
+            width: 260px;
+            color: $navy-blue;
+            font-size: 25px !important;
+            line-height: 30px !important;
+        }
+
+        p {
+            width: 250px;
+            margin-top: 10px !important;
+        }
+
+        &__btn {
+            position: absolute;
+            top: 75% !important;
+            right: 50% !important;
+            transform: translate(-50%, -50%);
+            color: white;
+            background-color: $red;
+            width: 200px;
+            height: 50px;
+            border: none;
+            border-radius: 10px;
+            font-weight: 600;
+            box-shadow: 0 30px 30px -15px rgba($color: $red, $alpha: .35);
+            transition: .2s ease-in-out;
+        
+        }
+    }
+    .footer {
+        width: 270px !important;
+        grid: 270px / auto;
+    }
+
+
 }
